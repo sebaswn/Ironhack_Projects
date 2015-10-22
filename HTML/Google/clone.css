@@ -1,0 +1,152 @@
+header{
+	width: 100%;
+	height: 70px;
+	background: white;
+	color: black;
+}
+
+div.header{
+	
+	height: 60px;
+	float:left;
+	text-align: center;
+	background: white;
+	
+}
+
+div#first{
+	width: 60%;
+	
+}
+
+div#name{
+	width: 80px;
+	color: grey;
+}
+
+div#gmail{
+	width: 70px;
+
+}
+
+div#images{
+	width: 70px;
+
+}
+
+div#apps{
+	width: 40px;
+}
+
+div#notifications{
+	width: 40px;
+}
+
+div#profile{
+	width: 60px;
+}
+
+article{
+	width: 100%;
+}
+
+div.body{
+	
+}
+
+div#space{
+	height: 120px;
+}
+div#logo{
+	height: 140px;
+	text-align: center;
+}
+
+div#logospace{
+	width: 200px;
+	height: 100px
+}
+
+div#search{
+	width: 500px;
+	height: 35px;
+	border: 1px solid blue;
+	position: relative;
+ 	top: 10px;
+  	left: 370px;
+  	text-align: right;
+  	color: grey;
+}
+
+div.buttons{
+	float:left;
+}
+
+div#googlesearch{
+	width: 125px;
+	height: 40px;
+	background: #E4D6D6;
+	position: relative;
+	left: 500px;
+	top: 40px;
+	text-align: center;
+	color: grey;
+}
+
+div#lucky{
+	width: 150px;
+	height: 40px;
+	background: #E4D6D6;
+	position: relative;
+	left: 650px;
+	text-align: center;
+	color: grey;
+}
+
+footer{
+	background: lightgrey;
+	position: relative;
+	top: 180px;
+	height: 40px;
+}
+
+div.footer{
+	float: left;
+	text-align: center;
+	color: gray;
+}
+
+div#advertising{
+	width: 90px;
+	height: 40px;
+}
+
+div#business{
+	width: 90px;
+	height: 40px;
+}
+
+div#about{
+	width: 90px;
+	height: 40px;
+}
+
+div#filler{
+	width: 720px;
+	height: 40px;
+}
+
+div#privacy{
+	width: 90px;
+	height: 40px;
+}
+
+div#terms{
+	width: 90px;
+	height: 40px;
+}
+
+div#settings{
+	width: 90px;
+	height: 40px;
+}
