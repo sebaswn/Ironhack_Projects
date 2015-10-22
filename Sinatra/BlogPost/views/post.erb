@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h2> Blog Posts: </h2>
+	<p></p>
+	<b><h3>---------------------------------</b></h3>
+	<a href="/new_post" >Create New Post</a>
+	<b><h3>---------------------------------</b></h3>
+	<%@posts.each do |post| %>
+	  <li>
+		  <h3>
+					<a href="/postcontent/:<%= post.id %>" ><%= post.name %></a></h3>
+					<p></p>
+					<h4><%= post.category %></h4>
+					<p></p>
+					<h5>Created: <%= post.time_stamp.strftime("%A %d %B %y     %I:%M:%S %P ")  %></h5>
+				---------------------------------
+	  </li>
+	<% end %>
+</body>
+</html>
+
+<!-- <a href="http://localhost:4567/add_new_task"> ADD NEW TASK </a> 
+ -->

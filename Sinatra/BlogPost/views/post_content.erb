@@ -1,0 +1,9 @@
+
+
+<h2>Title: <%=@posts[@idv-1].name%></h2>
+<b><%=@posts[@idv-1].content%></b>
+<p></p>
+Submitted by: <%=@posts[@idv-1].author%>
+<p></p>
+Date: <%= @posts[@idv-1].time_stamp.strftime("%A %d %B %y     %I:%M:%S %P ")  %>
+
