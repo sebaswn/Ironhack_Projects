@@ -1,0 +1,11 @@
+<h1>Which movie was released in <%= @find_posters[@random_number].release_date%> </h1>
+
+<% @find_posters.each do |index|%>
+	<% i = Imdb::Movie.new(index.id).poster%>
+			<img src="<%= i %>" style="width:228px;height:325px;">
+			<form action="/checking_answer" method="POST">
+				<input type="hidden" name="id" value = <%= index.id %>>
+				<button type="submit">CHOOSE AS ANSWER</button>
+			</form>
+	<p></p>
+<%end%>
