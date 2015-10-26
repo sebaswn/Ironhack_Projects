@@ -1,0 +1,128 @@
+.logo{
+	background-color: #F4F4F4;
+	height: 50px;
+	display: flex;
+  	align-items: center;
+  	justify-content: flex-end;
+}
+
+.search{
+	background-color: #F4F4F4;
+	height: 50px;
+	display: flex;
+  	align-items: center;
+}
+.container-fluid{
+	background-color: #F4F4F4;
+	align-items: center;
+
+}
+
+.link{
+	background-color: #F4F4F4;
+	height: 50px;
+	display: flex;
+  	align-items: center;
+  	font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+
+}
+
+a{
+	color: black;
+	font-weight: bold;
+}
+
+.issues{
+	background-color: #F4F4F4;
+	height: 50px;
+	display: flex;
+  	align-items: center;
+  	justify: center;
+  	font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.gist{
+	background-color: #F4F4F4;
+	height: 50px;
+	display: flex;
+  	align-items: center;
+  	font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.cons{
+	background-color: #F4F4F4;
+	height: 50px;
+	display: flex;
+  	align-items: center;
+  	padding: 20px;
+}
+
+.cos3{
+	background-color: #F4F4F4;
+	height: 50px;
+	display: flex;
+  	align-items: center;
+  	padding: 20px;
+}
+
+
+.box{
+	background-color: #F4F4F4;
+	height: 50px;
+	display: flex;
+  	align-items: center;
+}
+
+.aside{
+	height: 700px;
+	border: 1px solid red;
+}
+
+h1{
+	color:blue;
+}
+
+.jumbotron{
+	width: 300px;
+	height: 100px;
+	background-color: lightblue;
+}
+
+
+.alert{
+}
+
+.container{
+	padding: 20px;
+}
+
+.content{
+	width: 400px;
+}
+
+.spaceforbutton{
+	width: 600px;
+}
+
+button{
+	width: 140px;
+}
+
+.nav-tabs{
+	position: relative;
+	left: 400px;
+    bottom: 400px;
+    width: 650px;
+}
+
+.panel-default{
+	position: relative;
+	left: 400px;
+    bottom: 370px;
+    width: 650px;
+}
+
+
+
+
+
