@@ -1,0 +1,92 @@
+body {
+  background-color: #F5F5F5;
+  color: #aaa;
+}
+
+.yes {
+  background-color: #F5F5F5;
+  padding-top: 50px;
+  text-align: left;
+}
+
+.whale {
+  position: relative;
+  bottom: 6px;
+}
+
+body {
+  font-family: roboto;
+}
+
+.glyphicon-euro {
+  color: #f3ab4c;
+}
+
+.orange {
+  font-size: 17px;
+}
+
+h4 {
+  color: orange;
+  font-size: 30px;
+}
+
+.red {
+  color: #f64f5a;
+}
+
+.gray {
+  color: #aaa;
+}
+
+.white {
+  background-color: white;
+}
+
+p {
+  font-size: 35px;
+  padding-left: 20px;
+  color: #333;
+}
+
+.panel-heading.user-panel {
+  background-color: white;
+}
+
+.circle {
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding-left: 20px;
+  badding-bottom: 20px;
+  background-color: #797979;
+  border-radius: 100%;
+}
+
+.shapes {
+  padding-left: 40px;
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+
+.blue-button {
+  width: 170px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: white;
+  border: 1px solid #2889D8;
+}
+
+.comment {
+  padding-left: 35px;
+  position: relative;
+  bottom: 5px;
+}
+
+.blue {
+  color: #2889D8;
+}
+
+h {
+  color: #aaa;
+}
