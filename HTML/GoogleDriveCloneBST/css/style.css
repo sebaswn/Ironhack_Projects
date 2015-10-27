@@ -1,0 +1,248 @@
+.top{
+  padding: 15px;
+  padding-left: 0px;
+}
+
+.search{
+  padding: 15px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.google-search{
+  width: 543px;
+
+}
+
+.search-button{
+  padding: 15;
+  padding-left: 0px;
+  width: 60px;
+  height: 26px;
+  background-color: #4485F4;
+  border: 1px solid transparent;
+  position: relative;
+  top:15px;
+  left:8px;
+}
+
+.glyphicon-search{
+  color: white;
+}
+
+.links{
+  position: relative;
+  top:18px;
+  /*left:8px;*/
+}
+
+h{
+  color: #787878;
+}
+
+.glyphicon{
+  color: #737373;
+  font-size: 13px;
+}
+.whale{
+  position: relative;
+  bottom: 5px;
+}
+
+.header{
+  border-bottom: 1px solid #E5E5E5;
+}
+.second-header{
+  padding: 15px;
+  border-bottom: 3px solid #C8C8C8;
+  background-color: #FAFAFA;
+}
+
+hs{
+  position: relative;
+  top: 5px;
+  font-size: 20px;
+  color: #555555;
+}
+
+.dropdown-toggle{
+  border: 1px solid transparent;
+  background-color: #FAFAFA;
+}
+
+
+.mydrive{
+  color: #555;
+  font-size: 15px;
+}
+
+.gly{
+  position: relative;
+  top: 7px;
+  border-right: 1px solid #E5E5E5;
+}
+
+.glyphicon-paperclip{
+  font-size: 18px;
+  padding-right:27px;
+}
+
+.one{
+  font-size: 18px;
+  padding-right:27px;
+}
+
+.glyphicon-trash{
+  font-size: 18px;
+  padding-right:27px;
+}
+
+.glyphicon-option-vertical{
+  font-size: 18px;
+  padding-right:10px;
+}
+
+
+.glys{
+  position: relative;
+  top: 4px;
+}
+
+.glyphicon-th-list{
+  font-size: 18px;
+  padding-right:15px;
+}
+
+.glyphicon-sort-by-alphabet{
+  font-size: 18px;
+}
+
+
+.dropdown{
+  padding-right: 11px; 
+}
+
+.glyphicon-info-sign{
+  font-size: 18px;
+  padding-right:15px;
+}
+
+.glyphicon-cog{
+  font-size: 18px;
+  padding-right:15px;
+}
+
+.sidebar{
+  height: 700px;
+  border-right: 1px solid #BFBFBF;
+  background-color: #EEE;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-left: 35px;
+}
+.main{
+  background-color: #EEE;
+}
+
+.danger{
+  width: 100px;
+  height: 30px;
+  vertical-align: center;
+  background-color: #D84937;
+  color: white;
+}
+
+.glyphicon-folder-open{
+  font-size: 15px;
+  padding-top:25px;
+  padding-right: 15px;
+  color: #D84937;
+  position: relative;
+  right: 35px;
+
+}
+
+.two{
+  font-size: 15px;
+  padding-top:25px;
+
+  color: #D84937;
+  position: relative;
+  right: 35px;
+}
+
+jk{
+  font-size: 14px;
+  web-kit-boxsizing: ;
+}
+
+.glyphicon-camera{
+  font-size: 15px;
+  padding-top:25px;
+
+  color: #D84937;
+  position: relative;
+  right: 35px;
+}
+
+.glyphicon-time{
+  font-size: 15px;
+  padding-top:25px;
+
+  color: #D84937;
+  position: relative;
+  right: 35px;
+}
+
+.glyphicon-star{
+  font-size: 15px;
+  padding-top:25px;
+
+  color: #D84937;
+  position: relative;
+  right: 35px;
+}
+
+.trash-two{
+  font-size: 15px;
+  padding-top:25px;
+
+  color: #D84937;
+  position: relative;
+  right: 35px;
+}
+
+.glyphicon-menu-left{
+  font-size: 15px;
+  color: black;
+  position: relative;
+  bottom: 100px;
+  right: 0px;
+  left: 0px;
+}
+
+.caption{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
