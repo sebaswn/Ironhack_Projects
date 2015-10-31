@@ -9,7 +9,7 @@ var rooms = [
   N: 4,
   E: 3,
   S: undefined,
-  W: undefined,
+  W: 10,
   K: false,
   G: false,
   D: false,
@@ -135,7 +135,7 @@ var rooms = [
 },
 { //room10
   name: "Walk in Freezer. ",
-  description: "There's an emergency button in here. It's so cold though.... We can't stay here...",
+  description: "There's an emergency button in here. It's big and red and it says emergency. I wonder what it does...",
   N: undefined,
   E: 0,
   S: undefined,
@@ -163,6 +163,7 @@ var injury = false;
 var time = 0;
 var time_left = 5;
 var randomness = false;
+var win = false;
 start(current)
 
 function start(current)
@@ -405,7 +406,7 @@ function objectGun(current)
 
 function checkIfWon(current)
 {
-  if (current === 7)
+  if (current === 7 || win === true)
   {
     console.log("");
     console.log("");
@@ -442,37 +443,34 @@ function checkIfBearDanger(current)
     console.log("Holy F*uck, there's a bear in here !!".red);
     if (obG === true)
     {
-      console.log("BANG !!".red +
-        "     Phew.. that was close. You just shot the bear with the gun we picked up. Lucky us"
-        .green);
+      console.log("BANG !!".red + "     Phew.. that was close. You just shot the bear with the gun we picked up. Lucky us".green);
+      console.log("You have gained a nice warm fur coat. You are also covered in blood. I'm not sure this was a good idea...".green);
       rooms[bear].D = false;
       bear_alive = false;
+      obJ = true;
       input(current);
     }
     if (obSW === true)
     {
-      console.log("SWOSH !!".red +
-        "     Phew.. that was close. You just cut the bear with the sword we picked up. Lucky us"
-        .green);
-      console.log(
-        "Unfortunately, the bear cut you too. You are bleeding to death. You have 5 turns to get out of here and get help or you will die."
-        .red)
+      console.log("SWOSH !!".red + "     Phew.. that was close. You just cut the bear with the sword we picked up. Lucky us".green);
+      console.log("You have gained a nice warm fur coat. You are also covered in blood. I'm not sure this was a good idea...".green);
+      console.log("Unfortunately, the bear cut you too. You are bleeding to death. You have 5 turns to get out of here and get help or you will die.".red)
       rooms[bear].D = false;
       bear_alive = false;
+      obJ = true;
       injury = true;
       time = 0;
       input(current);
     }
     else if (obG === false)
     {
-      console.log("The bear just ate you. Too bad we didn't have a " +
-        "weapon ".magenta + "of some sort.");
+      console.log("The bear just ate you. Too bad we didn't have a " + "weapon ".magenta + "of some sort.");
       tryAgain();
     }
   }
   else
   {
-    input(current)
+    checkIfColdDanger(current);
   }
 }
 
@@ -482,10 +480,18 @@ function checkIfColdDanger(current)
   {
     if (obJ === false)
     {
+      console.log("It is too cold in here. We had to leave. Too bad we didn't have anythign warm to wear...".red);
       current = rooms[current].E;
       turns++;
       currentRoom(current);
+
+    }else if(obJ === true){
+      console.log("Yes ! We made it in thanks to that warm jacked we took from the bear. WE clicked the emergency button and it called the fire department ! We are saved.".green);
+      win = true;
+      checkIfWon(current)
     }
+  }else{
+    input(current);
   }
 }
 
@@ -776,4 +782,4 @@ function tryAgain()
       return;
     }
   }
-}
+}22
