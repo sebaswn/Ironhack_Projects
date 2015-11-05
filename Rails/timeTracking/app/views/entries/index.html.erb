@@ -6,6 +6,8 @@
 
 <h5> List of Entries </h5>
 
+<p><%= flash["notice"] %></p>
+
 <% @entries.each do |entry| %>
 			
 	<li> <%= "#{entry.hours} h, #{entry.minutes} m. Date: #{entry.date.strftime("%A, %b %d")}.   Comments: '#{entry.comments}'" %>

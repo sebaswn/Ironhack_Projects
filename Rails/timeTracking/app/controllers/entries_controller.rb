@@ -31,18 +31,18 @@ class EntriesController < ApplicationController
 		# 	})
 
 		if @entry.save
-			redirect_to action: 'index', controller:
-	'entries', project_id: @project.id
+			redirect_to action: 'index', controller: 'entries', project_id: @project.id
 		else
-			render 'new'
+			flash["errors"] = @entry.errors.full_messages
+			redirect_to new_project_entry_path(@project.id)
 		end
-
 	end
 
 
 	def destroy
 		entry = Entry.find_by(id: params[:id])
 		entry.destroy
+		flash["notice"] = "Entries succesfully removed"
 		redirect_to project_entries_path(entry.project_id)
 	end
 

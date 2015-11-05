@@ -1,5 +1,8 @@
 <h1> Create a new entry </h1>
 
+		<%= flash["errors"] %>
+
+
 <%= form_for [@project, @entry] do |f| %>
 	<div>
 		<%= f.number_field :hours, placeholder: "How many Hours" %>

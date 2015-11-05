@@ -15,18 +15,34 @@ class ProjectsController < ApplicationController
 	end
 
 
+	def edit
+		@project = Project.find_by(id: params[:id])
+	end
+
+	def update
+		@project = Project.find_by(id: params[:id])
+
+
+		if @project.update(project_params)
+			flash["notice"] = "Project updated successfully"
+			redirect_to projects_path
+		else
+			flash["errors"] = project.errors.full_messages
+			redirect_to edit_project_path(project)
+		end
+
+	end
+
+
 	def create
 
-		@project = Project.create({
-			name: params[:project][:name],
-			description: params[:project][:description],
-			priority: params[:project][:priority]
-			})
+		@project = Project.create(project_params)
 
 		if @project.save
 			redirect_to '/projects'
 		else
-			render 'new'
+			flash["errors"] = @project.errors.full_messages
+			redirect_to new_project_path
 		end
 
 	end
@@ -34,7 +50,17 @@ class ProjectsController < ApplicationController
 	def destroy
 		project = Project.find_by(id: params[:id])
 		project.destroy
+		flash["notice"] = "Project succesfully removed"
 		redirect_to projects_path(project)
 	end
+
+
+	private
+
+
+	def project_params
+		params.require(:project).permit(:title, :description, :priority)
+	end
+
 
 end

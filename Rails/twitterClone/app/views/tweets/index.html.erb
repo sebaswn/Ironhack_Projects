@@ -1,0 +1,17 @@
+<h3>Twitter Clone </h3>
+
+<%= form_for @tweet do |f| %>
+	<%= f.text_field :content, placeholder: "say something smart"%>
+	<%= f.submit %>
+<% end %>
+
+
+
+
+<ul>
+	<% @tweets.each do |i| %>
+		<li>
+			<%= i.content %>
+		</li>
+	<% end %>
+</ul>
