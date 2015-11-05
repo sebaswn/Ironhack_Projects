@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   	resources :entries, only: [:index, :new, :show, :create]
   end
 
+  resources :entries, only: [:edit, :update, :destroy]
 
 end

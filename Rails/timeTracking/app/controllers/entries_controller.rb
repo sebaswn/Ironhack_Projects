@@ -29,7 +29,7 @@ class EntriesController < ApplicationController
 		# 	date: params[:entry][:date],
 		# 	comments: params[:entry][:comments]
 		# 	})
-		
+
 		if @entry.save
 			redirect_to action: 'index', controller:
 	'entries', project_id: @project_id.id
@@ -39,12 +39,17 @@ class EntriesController < ApplicationController
 
 	end
 
+
+	def destroy
+		entry = Entry.find_by(id: params[:id])
+		entry.destroy
+		redirect_to project_entries_path(entry.project_id)
+	end
+
 	private
 
 	def entry_params
 		params.require(:entry).permit(:hours, :minutes, :date, :comment)
 	end
-
-
 
 end
