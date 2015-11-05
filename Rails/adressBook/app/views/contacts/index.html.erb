@@ -1,0 +1,10 @@
+<ul>
+		<% @contacts.each do |contact| %>
+			
+			<li> 
+			<input type="hidden" name="id" value = <%= contact.id %>>
+				Name: <a href = "/contacts/show"> <%= contact.name %></a>
+			<br>
+				
+		<%end%>
+</ul>

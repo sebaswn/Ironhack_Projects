@@ -1,0 +1,13 @@
+<ul>
+		<% @projects.each do |project| %>
+			
+			<li> Title: <%= project.name %>
+			<br>
+			 Priority: <%= project.priority %>
+			 <br>
+			 Content: <%= project.description %>
+			 </li>
+			 <br>
+		<%end%>
+</ul>
+

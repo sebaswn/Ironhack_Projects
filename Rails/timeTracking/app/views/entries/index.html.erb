@@ -1,0 +1,12 @@
+<h3> Title: <%= @project.name %> </h3>
+
+<h4>Time spent on this project: <%= @methods.add_time(@entries) %></h4>
+<br>
+<br>
+
+<% @entries.each do |entry| %>
+			
+	<li> <%= "#{entry.hours} h, #{entry.minutes} m. Date: #{entry.date.strftime("%A, %b %d")}.   Comments: '#{entry.comments}'" %>
+	</li>
+	<br>
+<%end%>

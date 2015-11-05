@@ -1,0 +1,19 @@
+<h1> Create a new entry </h1>
+
+<%= form_for [@project, @entry] do |f| %>
+	<div>
+		<%= f.number_field :hours, placeholder: "How many Hours" %>
+	</div>
+	<div>
+		<%= f.number_field :minutes, placeholder: "How many Minutes" %>
+	</div>
+	<div>
+		<%= f.date_field :date, placeholder: "Date" %>
+	</div>
+	<div>
+		<%= f.text_area :comments, placeholder: "Comment" %>
+	</div>
+	<div>	
+		<%= f.submit "Add my Time" %>
+	</div>
+<% end %>
