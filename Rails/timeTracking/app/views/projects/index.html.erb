@@ -6,6 +6,8 @@
 			 Priority: <%= project.priority %>
 			 <br>
 			 Content: <%= project.description %>
+			 <br>
+			 <%= link_to("Delete", project_path(project), method: :delete )%>
 			 </li>
 			 <br>
 		<%end%>

@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :projects, only: [:index, :new, :show, :create] do
   	resources :entries, only: [:index, :new, :show, :create]
   end
-
+  resources :projects, only: [:edit, :update, :destroy]
   resources :entries, only: [:edit, :update, :destroy]
 
 end

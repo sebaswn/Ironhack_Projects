@@ -32,7 +32,7 @@ class EntriesController < ApplicationController
 
 		if @entry.save
 			redirect_to action: 'index', controller:
-	'entries', project_id: @project_id.id
+	'entries', project_id: @project.id
 		else
 			render 'new'
 		end
