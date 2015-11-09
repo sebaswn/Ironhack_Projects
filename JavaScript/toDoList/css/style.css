@@ -1,0 +1,13 @@
+.add-important-button {
+  background-color: red;
+  color: white;
+}
+
+.show-important-button {
+  background-color: green;
+  color: white;
+}
+
+.important {
+  color: red;
+}
