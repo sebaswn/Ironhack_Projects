@@ -1,0 +1,35 @@
+<%= render "layouts/header" %>
+
+<div class="jumbotron details">
+  <h2><%= @concert.band %></h2>
+  	<br>
+  <p>
+  	<div>
+	  	<div class="profile-pic">
+	  		<img src="<%= @concert.image %>" style="width:200px;height:200px;">
+	  	</div>
+	</div>
+  <br>
+  <br>
+  <br>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">INFO</div>
+  <div class="panel-body">
+ 
+      <b>LOCATION: </b><%= @concert.venue %> , <%= @concert.city %>
+      <br>
+      <b>DATE: </b><%= @concert.date %>
+      <br>
+      <b>DESCRIPTION: </b><%= @concert.description %>
+      <br>
+      <b>PRICE: </b><%= @concert.price %>
+  </div>
+</div>
+
+
+
+
+</div>
+</p>
+</div>

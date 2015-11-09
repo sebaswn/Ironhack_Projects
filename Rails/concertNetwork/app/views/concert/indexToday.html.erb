@@ -1,0 +1,29 @@
+<%= render "layouts/header" %>
+
+
+
+
+<div class="jumbotron">
+  <h2>Concerts Today: <%= @concerts_today.count %></h2>
+  	<br>
+  <p>
+		<% @concerts_today.each do |x| %>
+			<div class="media">
+			  <div class="media-left">
+			    <a href="/concerts/<%= x.id %>">
+			      <img class="media-object" src="<%= x.image %>" style="width:64px;height:64px;">
+			    </a>
+			  </div>
+			  <div class="media-body">
+			    <h4 class="media-heading"><%= x.band %></h4>
+			    <%= x.description %>
+			  </div>
+
+
+			</div>
+
+			
+		<% end %>
+</p>
+</div>
+

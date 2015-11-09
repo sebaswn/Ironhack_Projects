@@ -1,0 +1,13 @@
+<%= render "layouts/header" %>
+
+<%= form_for [@concert] do |f| %>
+	<div>
+		<%= f.text_field :name, placeholder: "Full Name" %>
+	</div>
+	<div>
+		<%= f.text_area :email, placeholder: "email" %>
+	</div>
+	<div>	
+		<%= f.submit "Add my Time" %>
+	</div>
+<% end %>
