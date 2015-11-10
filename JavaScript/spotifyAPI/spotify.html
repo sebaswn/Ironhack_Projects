@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spotify</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
+  </head>
+  <body>
+    <div class="jumbotron headerBody">
+      <form>
+        <h1>Search Artist In Spotify</h1>
+        <br>
+        <br>
+        <div class="col-sm-2 searching">
+        </div>
+        <div class="col-sm-8 searching">
+          <input class="form-control search" type="text" id="formGroupInputLarge" placeholder="Large input">
+        </div>
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary js-search" type="submit">Search Spotify</button>
+      
+      </form>
+      <br>
+    </div>
+    <div class="jumbotron artistList">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Artists</h2>
+          <div class="media artistMedia">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Albums</h2>
+          <div class="media albumMedia">
+          </div>
+        </div>
+        <div class="col-md-3 right">
+            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tracks</h2>
+
+          <ul class="trackMedia">
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    
+    <script src="spotify.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

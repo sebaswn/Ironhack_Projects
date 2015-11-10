@@ -1,17 +1,19 @@
-function onSubmit (event) {
+function onSubmit(event) {
   event.preventDefault();
   console.debug('SUBMITTED');
-	var newCharacter = {
-  // Build a new character from the values in the form
+  var newCharacter = {
+    name: $('.name').val(),
+    occupation: $('.occupation').val(),
+    weapon: $('.weapon').val()
   }
 
-  // Send a post request with the data for the new character
+  var request = $.post('https://ironhack-characters.herokuapp.com/characters', newCharacter);
 
-  function onSaveSuccess (response) {
+  function onSaveSuccess(response) {
     console.debug('BOOM', response);
   }
 
-  function onSaveFailure (err) {
+  function onSaveFailure(err) {
     console.error(err.responseJSON);
   }
 
@@ -21,19 +23,35 @@ function onSubmit (event) {
 
 $('.js-submit').on('click', onSubmit);
 
-
-function fetchCharacters () {
+function fetchCharacters() {
   var request = $.get('https://ironhack-characters.herokuapp.com/characters');
 
-  function handleCharacters (characters) {
-    // what is the response from the get request?
-    // write a function to process the response 
-    // it should loop through each character in the response
-    // create the DOM element with HTML to describe each character
-    // append to the list $('.js-character-list')
+  function handleCharacters(characters) {
+    characters.forEach(function appendLi(chr) {
+      var html = [
+        '<li>',
+        '<h2>' + chr.name + '</h2>',
+        '<dl>',
+        '<dt>Occupation:</dt>',
+        '<dd>' + chr.occupation + '</dd>',
+
+        '<dt>Weapon:</dt>',
+        '<dd>' + chr.weapon + '</dd>',
+
+        '<dt>Debt:</dt>',
+        '<dd>' + chr.debt + '</dd>',
+        '</dl>',
+        '</li>'
+
+        // Join the array by newline to make a giant string
+      ].join('\n');
+
+      // Append giant HTML to list
+      $('.js-character-list').append(html);
+    });
   }
 
-  function handleError (err1, err2, err3) {
+  function handleError(err1, err2, err3) {
     console.error('OH NO!!', err1, err2, err3);
   }
 

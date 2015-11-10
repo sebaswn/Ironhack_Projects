@@ -1,0 +1,36 @@
+.headerBody{
+	text-align: center;
+
+}
+body{
+	background-color: #2EBD59;
+}
+.artistList{
+	padding-left: 100px;
+	height: 100%;
+}
+
+.right{
+	
+
+}
+
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: rgba(238,238,238,0.8);
+}
+
+.searching{
+	
+}
+
+.search{
+	margin: 0 auto;
+}
+
+.trackMedia{
+	
+}
