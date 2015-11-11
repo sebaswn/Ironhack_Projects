@@ -71,7 +71,9 @@ function searchTracks(event){
     for(i = 0, len = tracks.items.length; i < len; i++){
                 var html = [
                       '<li>',
+                      '<a class="linkToSong" href="#" dataSongURL="'+ tracks.items[i].preview_url +'">',
                       '<h4>' + tracks.items[i].name + '</h4>',
+                      '</a>',
                       '<dl>',
                       '<b>',
                       "Track #:",
@@ -82,28 +84,32 @@ function searchTracks(event){
 
                   $('.trackMedia').append(html);
               }   
+
   }
   request.done(handleTracks);
 }
 
 
+function OpenInNewTab(event) {
+  event.preventDefault();
+  var url = $(this).attr('dataSongURL')
+  var win = window.open(url, '_blank');
+  win.focus();
 
+}
 
-
+function OpenInNewWindow(event){
+  event.preventDefault();
+  var strWindowFeatures = "location=yes,height=100,width=400,scrollbars=no,status=yes";
+  var url = $(this).attr('dataSongURL')
+  var win = window.open(url, "_blank", strWindowFeatures);
+}
 
 
 $(document.body).on('click','.js-search', searchArtists);
 $(document.body).on('click','.linkToAlbum', searchAlbums);
 $(document.body).on('click','.linkToTrack', searchTracks);
-
-
-
-
-
-
-
-
-
+$(document.body).on('click','.linkToSong', OpenInNewWindow);
 
 
 
