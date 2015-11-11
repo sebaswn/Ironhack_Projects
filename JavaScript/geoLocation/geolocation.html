@@ -1,0 +1,127 @@
+<!-- ruby -run -e httpd . -p 5000 -->
+<!-- AIzaSyCP0e-joLvDOVWc3_KStR_6yn_eWNPZoF8 -->
+
+
+
+
+<html>
+​
+  <head>
+​
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+​
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+​ 
+  </head>
+​
+
+  
+
+<body>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <h1>GeoLocation</h1><br>
+          <button class="btn btn-primary findPosition">Find Position</button>
+          <button class="btn btn-primary watchPosition">Watch Position</button>
+          <button class="btn btn-primary stopPosition">Stop Watching Position</button>
+
+        </h3>
+      </div>
+      <div class="panel-body">
+        <div class="map">
+          </div>
+            <div>
+              <b class="status">
+              </b>
+            </div>
+      </div>
+    </div>
+
+</body>
+
+
+
+
+
+  <script type="text/javascript">
+  
+  if (navigator.geolocation) {
+     
+    }else {
+      log("geolocation NOT available", true);
+    }
+    $('.stopPosition').hide();
+    $('.panel-body').hide();
+
+
+
+  var options = {};
+    var watchId;
+  var geo = navigator.geolocation;
+
+    $('.findPosition').on('click', function(){
+      $('.panel-body').show();
+      geo.getCurrentPosition(onLocation, onError, options);
+      log("Searching for position...")
+
+      geo.clearWatch(watchId)
+    });
+
+
+    $('.watchPosition').on('click', function(){
+      log("Watching position...")
+      watchId = geo.watchPosition(onLocation, onError, options);
+      $(this).hide();
+      $('.stopPosition').show();
+      $('.panel-body').show();
+    });
+
+
+    $('.stopPosition').on('click', function(){
+      geo.clearWatch(watchId);
+      log("Stopped watch");
+      $(this).hide();
+      $('.watchPosition').show();
+      $('.panel-body').show();
+    });
+
+    $('document').on('ready', function(){
+      $('.stopPosition').hide();
+    });
+
+
+
+    function log(text, important){
+      $('.status').empty();
+      $('.status').append(text);
+    }
+
+  function onLocation(position){
+      var c = position.coords;
+      log("latitude: " + c.latitude
+        + ", longitude: "  + c.longitude);
+      $('.map').empty();
+
+
+      $('.map').append('<img src="https://maps.googleapis.com/maps/api/staticmap?center='+ c.latitude +','+ c.longitude+'&zoom=13&size=400x400&maptype=roadmap&markers=color:red%7Clabel:S%7C'+ c.latitude +','+ c.longitude+'&key=AIzaSyCP0e-joLvDOVWc3_KStR_6yn_eWNPZoF8">');
+    };
+    
+
+    
+
+    function onError(error) {
+      log("Error getting position: " + error, true);
+    }
+
+
+  </script>
+
+
+​
+    
+  </body>
+</html>
